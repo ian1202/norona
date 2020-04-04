@@ -4,99 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="testing_style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+      <!---navbar-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <!-- Main Style -->
+    <link href="result.css" rel="stylesheet">
+
+    <!-- NodeJS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
 </head>
 <body>
 
-    <div class="container spetrogram-title">
-        <div class="row col-md-12">
-            <h2>To achieve an accurate assessment, please fill out the following: </h2>
+
+
+    <div class="container-fluid">
+        <div class="container">
+
+                <div class="col-md-12 col-sm-12">
+
+                    <p id="demo"></p>
+
+                    <div class="section-title text-center">
+                        <h2 > You Are Clear </h2>
+
+                    <div class="text-center progress yellow">
+                        <span class="progress-left">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <span class="progress-right">
+                            <span class="progress-bar"></span>
+                        </span>
+                        <div class="inner-circle"></div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="instructions">
+                    <h2 style="color:orange;"> Important Informaiton! </h2>
+                    <br>
+                    <p>• You have <b style="color: orange;">not</b> come into contact with any virus carriers.</p>
+                    <br>
+                    <p>• Wash your hands often and stay away from crowded areas.</p>
+                    <br>
+                    <p>• Maintain at least 1 metre (3 feet) distance between yourself 
+                        <br>and anyone who is coughing or sneezing.</p>
+                    <br>
+                    <p>• Stay home if you feel unwell. If you have a fever, cough and difficulty 
+                        <br>breathing, seek medical attention and call in advance.</p>
+                </div>
+            </div>
         </div>
+
+    </div>
     </div>
 
-    <div class="form-style-5">
-        <form>
-             <fieldset>
-                <legend><span class="number">1</span> Patient Information</legend>
-                <select id="job" name="field4">
-                    <optgroup label="Indoors">
-                        <option value="fishkeeping">Gender</option>
-                        <option value="reading">Male</option>
-                        <option value="boxing">Female</option>
-                    </optgroup>
-                </select>  
-                        <input type="email" name="field2" placeholder="Age">
-                        <input type="email" name="field2" placeholder="Height (m)">
-                        <input type="email" name="field2" placeholder="Weight (kg)">
-                        <input type="email" name="field2" placeholder="Age">
-                        <label for="job">Existing Conditions:</label>
-                            <input type="checkbox" class="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Smoker</label><br>
-                            <input type="checkbox" class="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> COPD</label><br>
-                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Asthma</label><br><br>
-                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> High Blood Pressure</label><br><br>
-                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Asthma</label><br><br>
-                    <label for="job">Have you recently traveled to an area with known local spread of COVID-19?</label>
-                        <select id="job" name="field4">
-                            <optgroup label="Indoors">
-                                <option value="fishkeeping">Yes</option>
-                                <option value="reading">No</option>
-                            </optgroup>
-                        </select>    
+ <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<!-- Bootstrap -->
+<script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
 
-                        <label for="job">Have you been in known close contact with other COVID-19 affected people? 
-                        </label>
-                        <select id="job" name="field4">
-                            <optgroup label="Indoors">
-                                <option value="fishkeeping">Yes</option>
-                                <option value="reading">No</option>
-                            </optgroup>
-                        </select>  
+<script>
+        $(document).ready(function(){
+    $('.progress-value > span').each(function(){
+        $(this).prop('Counter',0).animate({
+            Counter: $(this).text()
+        },{
+            duration: 2500,
+            easing: 'swing',
+            step: function (now){
+                $(this).text(Math.ceil(now));
+            }
+        });
+    });
+});
 
-                        <label for="job">Have you been enforcing self-quarantine?</label>
-                        <select id="job" name="field4">
-                            <optgroup label="Indoors">
-                                <option value="fishkeeping">Yes</option>
-                                <option value="reading">No</option>
-                            </optgroup>
-                        </select>     
+</script>
 
-                </fieldset>
-                    <fieldset>
-                    <legend><span class="number">2</span> Additional Info</legend>
-                    <textarea name="field3" placeholder="About Your School"></textarea>
-                </fieldset>
-            <input type="submit" value="Apply" />
-        </form>
-    </div>
 
-    <div class="container spetrogram-title">
-        <div class="row col-md-12">
-            <h2>Now let’s start breathing!</h2>
-        </div>
-        <div class="row col-md-12">
-            <p>  
-            <br>1. Breathe in and out at a normal rate for 30 seconds. 
-            <br>2. Take a slow, deep breath in for 5 seconds.
-            <br>3. Breathe out for 5 seconds. 
-            <br>4. Say your name: <i>“My name is Caroline”</i>
-            </p>
-        </div>
-    </div>
+<script>
 
-    <div class="container spectrogram">
-        <div class="row col-md-12">
-            <button id="button" ty[e="button" value="show"]>Start to breathe</button>
-            <canvas></canvas>
-        </div>
-    </div>
+    var x = document.getElementById("demo");
+    
+    $(window).ready (function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    })
+    
+    function showPosition(position) {
+    x.innerHTML = "Latitude: " + position.coords.latitude + 
+    "<br>Longitude: " + position.coords.longitude;
+    }
 
+
+
+    var socket = io()
+    $(() => {
+        $(window).load(()=>{
+            var position = { position}
+            postMessage(position)
+        })
+        getMessages()
+    })
+
+    socket.on('position', addMessage)
+
+    function addMessage(position){
+        $("#demo").append(`<p> ${position} </p>`)
+    }
+
+    function getMessages() {
+        $.get('http://localhost:3000/messages', (data) => {
+            data.forEach(addMessage);
+        })
+    }
+
+    function postMessage(message) {
+        $.post('http://localhost:3000/messages', message)
+    }
+
+</script>
     
     
-
-<script type="text/javascript" src="norona.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 </html>
