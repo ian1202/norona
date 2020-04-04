@@ -30,6 +30,11 @@ h1{
 
 /* Form*/
 
+
+.form-title {
+    margin: 40px 0;
+}
+
 .form-style-5{
 	max-width: 1000px;
 	padding: 40px 40px;
@@ -143,8 +148,7 @@ canvas {
 }
 
 
-.spetrogram-title,
-.form-title{
+.spetrogram-title{
   margin-top: 10%;
 }
 
