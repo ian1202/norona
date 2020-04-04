@@ -5,14 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 <body>
-    <h1>Let's see if you have shortness of breath</h1>
-<canvas></canvas>
-    
+	<div class="jumbotron">
+			<div class="title">
+				<h1> Welcome to Norona</h1>
+				<p> Your guide to using breath audio to better triage, screen, and monitor COVID-19 symptoms.</p>
+				<p><i>Please have your microphone connected </i></p>
+				<a data-scroll href="#form" class="btn btn-light btn-radius btn-brd"><i class="fa fa-play" aria-hidden="true"></i> Let's Begin </a>
+			</div>
+	</div>
 
-<script type="text/javascript" src="norona.js"></script>
+	<div class="container form-title">
+        <div class="row col-md-12">
+            <h2>To achieve an accurate assessment, please fill out the following: </h2>
+        </div>
+    </div>
+
+    <div class="form-style-5" id="form">
+        <form>
+             <fieldset>
+                <legend><span class="number">1</span> Patient Information</legend>
+                <select id="job" name="field4">
+                    <optgroup label="Indoors">
+                        <option value="fishkeeping">Gender</option>
+                        <option value="reading">Male</option>
+                        <option value="boxing">Female</option>
+                    </optgroup>
+                </select>  
+                        <input type="email" name="field2" placeholder="Age">
+                        <input type="email" name="field2" placeholder="Height (m)">
+                        <input type="email" name="field2" placeholder="Weight (kg)">
+                        <input type="email" name="field2" placeholder="Age">
+					<legend><span class="number">2</span> Existing Conditions:</legend>
+                            <input type="checkbox" class="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Smoker</label><br>
+                            <input type="checkbox" class="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> COPD</label><br>
+                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Asthma</label><br><br>
+                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> High Blood Pressure</label><br><br>
+                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Asthma</label><br><br>
+					
+					<legend><span class="number">3</span> Just a few more questions...</legend>
+						<label for="job">Have you recently traveled to an area with known local spread of COVID-19?</label>
+                        <select id="job" name="field4">
+                            <optgroup label="Indoors">
+                                <option value="fishkeeping">Yes</option>
+                                <option value="reading">No</option>
+                            </optgroup>
+                        </select>    
+
+                        <label for="job">Have you been in known close contact with other COVID-19 affected people? 
+                        </label>
+                        <select id="job" name="field4">
+                            <optgroup label="Indoors">
+                                <option value="fishkeeping">Yes</option>
+                                <option value="reading">No</option>
+                            </optgroup>
+                        </select>  
+
+                        <label for="job">Have you been enforcing self-quarantine?</label>
+                        <select id="job" name="field4">
+                            <optgroup label="Indoors">
+                                <option value="fishkeeping">Yes</option>
+                                <option value="reading">No</option>
+                            </optgroup>
+                        </select>     
+
+                </fieldset>
+                    <fieldset>
+                    <legend><span class="number">4</span> Additional Info</legend>
+                    <textarea name="field3" placeholder="Anything else you want to tell us?"></textarea>
+				</fieldset>
+
+
+
+				<div class="container spetrogram-title">
+					<div class="row col-md-12">
+						<h2>Now let’s start breathing!</h2>
+					</div>
+					<div class="row col-md-12">
+						<p>  
+						<br>1. Click the "Start to breathe" button below
+						<br>2. Breathe in and out at a normal rate for 30 seconds into your microphone. 
+						<br>3. Take a slow, deep breath in and hold it for 10 seconds.
+						<br>4. Breathe out for 5 seconds. 
+						<br>5. Say your name: <i>“My name is Caroline”</i>
+						</p>
+					</div>
+				</div>
+			
+				<div class="container spectrogram">
+					<div class="row col-md-12">
+						<button id="button" type="button" value="show">Start to breathe</button>
+						<canvas></canvas>
+					</div>
+				</div>
+			
+
+
+            <input type="submit" onclick="location.href='result.html';" value="Next"/>
+        </form>
+	</div>
+	
+
+
+	<script type="text/javascript" src="norona.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
 </body>
 </html>

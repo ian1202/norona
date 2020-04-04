@@ -2,6 +2,7 @@ console.clear();
 
 // UPDATE: there is a problem in chrome with starting audio context
 //  before a user gesture. This fixes it.
+var container = document.getElementsByClassName("container");
 
 var started = null;
 window.addEventListener('click', () => {
@@ -11,7 +12,7 @@ window.addEventListener('click', () => {
 })
 
 function initialize() {
-  document.body.querySelector('h1').remove();
+  document.body.querySelector('button').innerHTML= 'Stop breathing';
   const CVS = document.body.querySelector('canvas');
   const CTX = CVS.getContext('2d');
   const W = CVS.width = window.innerWidth;
