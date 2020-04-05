@@ -33,14 +33,12 @@ html {
 }
 
 
-
-.infograhic img{
-    text-align: center;
+div .a {
+  margin-left: 50px;
 }
 
-
-.a {
-  text-indent: 20%; 
+#chest{
+  margin: 10px;
 }
 
 .breathing {
