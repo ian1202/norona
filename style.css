@@ -171,7 +171,11 @@ canvas {
 
 /* Audio controls*/
 
-
+#controls {
+    display: flex;
+    margin-top: 2rem;
+    max-width: 28em;
+  } 
 
 .audio button {
     flex-grow: 1;

@@ -6,12 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
 </head>
 <body>
 	<div class="jumbotron">
 			<div class="title">
-				<h1> Welcome to <b>Easy Breathe</b></h1>
+				<h1> Welcome to <b>Norona</b></h1>
 				<p> Your guide to using breath audio to better triage, screen, and monitor COVID-19 symptoms.</p>
 				<p><i>*Please have your microphone connected*</i></p>
 				<a data-scroll href="#form" class="btn btn-light btn-radius btn-brd"><i class="fa fa-play" aria-hidden="true"></i> Let's Begin </a>
@@ -52,8 +51,8 @@
 							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Hypertension</label><br>
 					</fieldset>
                     <fieldset>
-                    <legend><span class="number">4</span> Additional Info</legend>
-                    <textarea name="field3" placeholder="Anything else you want to tell us?"></textarea>
+						<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Other</label><br>
+						 <textarea name="field3" placeholder="Other existing conditions"></textarea>
 					</fieldset>
 
 					<legend><span class="number">3</span> Just a few more questions...</legend>
@@ -77,42 +76,42 @@
                         </select>     
 
 
-				<div class="container spetrogram-title">
-					<div class="row col-md-12">
-						<h2>Now let’s start breathing!</h2>
-					</div>
-					<div class="row col-md-12">
-						<p>  
-						<br>1. Click the "Start to breathe" button below
-						<br>2. Breathe in and out at a normal rate for 30 seconds into your microphone. 
-						<br>3. Take a slow, deep breath in and hold it for 10 seconds.
-						<br>4. Breathe out for 5 seconds. 
-						<br>5. Say your name: <i>“My name is Caroline”</i>
-						</p>
-					</div>
-				</div>
 
-				<div class="audio">
+					<div class="container spetrogram-title">
+						<div class="row col-md-12">
+							<h2>Now let’s start breathing!</h2>
+						</div>
+						<div class="row col-md-12">
+							<p>  
+							<br>1. Click the "Record" button below
+							<br>2. Breathe in and out at a normal rate for 30 seconds into your microphone. 
+							<br>3. Take a slow, deep breath in and hold it for 10 seconds.
+							<br>4. Breathe out for 5 seconds. 
+							<br>5. Say your name: <i>“My name is Caroline”</i>
+							</p>
+						</div>
+					</div>
 
-					<div id="controls">
-						<button id="recordButton">Record</button>
-						<button id="pauseButton" disabled>Pause</button>
-						<button id="stopButton" disabled>Stop</button>
-					 </div>
-					 <div id="formats">Format: start recording to see sample rate</div>
-					   <p><strong>Recordings:</strong></p>
-					   <ol id="recordingsList"></ol>
-	
-	
+					<div class="audio">
+
+						<div id="controls">
+							<button id="recordButton" onclick="initialize();">Record</button>
+							<button id="pauseButton" disabled>Pause</button>
+							<button id="stopButton" disabled>Stop</button>
+						 </div>
+						 <div id="formats">Format: start recording to see sample rate</div>
+						   <p><strong>Recordings:</strong></p>
+						   <ol id="recordingsList"></ol>
+		
+						</div>
 				
 					<div class="container spectrogram">
 						<div class="row col-md-12">
-							<button id="button" onclick="initialize();" type="button" value="show">Start to breathe</button>
+							<!-- <button id="button" onclick="initialize();" type="button" value="show">Start to breathe</button> -->
 							<canvas></canvas>
 						</div>
 					</div>
 					
-				</div>
 		
             <input type="submit" onclick="location.href='result.html';" value="Next"/>
         </form>
@@ -120,9 +119,13 @@
 	
 
 
-	<script type="text/javascript" src="norona.js"></script>
+<script type="text/javascript" src="norona.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+<script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
 
 
 </body>

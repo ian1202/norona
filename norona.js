@@ -69,8 +69,7 @@ function initialize() {
 
 
 //Audio
-
-
+//webkitURL is deprecated but nevertheless
 URL = window.URL || window.webkitURL;
 
 var gumStream; 						//stream from getUserMedia()
@@ -203,7 +202,7 @@ function createDownloadLink(blob) {
 	//save to disk link
 	link.href = url;
 	link.download = filename+".wav"; //download forces the browser to donwload the file using the  filename
-	link.innerHTML = "Save to disk";
+	link.innerHTML = "Download Your Breathing Sound";
 
 	//add the new audio element to li
 	li.appendChild(au);
@@ -214,24 +213,24 @@ function createDownloadLink(blob) {
 	//add the save to disk link to li
 	li.appendChild(link);
 	
-	//upload link
-	var upload = document.createElement('a');
-	upload.href="#";
-	upload.innerHTML = "Upload";
-	upload.addEventListener("click", function(event){
-		  var xhr=new XMLHttpRequest();
-		  xhr.onload=function(e) {
-		      if(this.readyState === 4) {
-		          console.log("Server returned: ",e.target.responseText);
-		      }
-		  };
-		  var fd=new FormData();
-		  fd.append("audio_data",blob, filename);
-		  xhr.open("POST","upload.php",true);
-		  xhr.send(fd);
-	})
-	li.appendChild(document.createTextNode (" "))//add a space in between
-	li.appendChild(upload)//add the upload link to li
+	// //upload link
+	// var upload = document.createElement('a');
+	// upload.href="#";
+	// upload.innerHTML = "Upload";
+	// upload.addEventListener("click", function(event){
+	// 	  var xhr=new XMLHttpRequest();
+	// 	  xhr.onload=function(e) {
+	// 	      if(this.readyState === 4) {
+	// 	          console.log("Server returned: ",e.target.responseText);
+	// 	      }
+	// 	  };
+	// 	  var fd=new FormData();
+	// 	  fd.append("audio_data",blob, filename);
+	// 	  xhr.open("POST","upload.php",true);
+	// 	  xhr.send(fd);
+	// })
+	// li.appendChild(document.createTextNode (" "))//add a space in between
+	// li.appendChild(upload)//add the upload link to li
 
 	//add the li element to the ol
 	recordingsList.appendChild(li);
