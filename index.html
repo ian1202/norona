@@ -11,9 +11,9 @@
 <body>
 	<div class="jumbotron">
 			<div class="title">
-				<h1> Welcome to Norona</h1>
+				<h1> Welcome to <b>Easy Breathe</b></h1>
 				<p> Your guide to using breath audio to better triage, screen, and monitor COVID-19 symptoms.</p>
-				<p><i>Please have your microphone connected </i></p>
+				<p><i>*Please have your microphone connected*</i></p>
 				<a data-scroll href="#form" class="btn btn-light btn-radius btn-brd"><i class="fa fa-play" aria-hidden="true"></i> Let's Begin </a>
 			</div>
 	</div>
@@ -37,10 +37,10 @@
                         <option value="reading">Male</option>
                         <option value="boxing">Female</option>
                 </select>  
-                        <input type="email" name="field2" placeholder="Age">
-                        <input type="email" name="field2" placeholder="Height (m)">
-                        <input type="email" name="field2" placeholder="Weight (kg)">
-                        <input type="email" name="field2" placeholder="Age">
+						<input type="email" name="field2" placeholder="Age">
+						<input type="email" name="field2" placeholder="Height (ft.)">
+						<input type="email" name="field2" placeholder="Weight (lb)">
+
 					<legend><span class="number">2</span> Existing Conditions:</legend>
                             <input type="checkbox" class="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Smoker</label><br>
                             <input type="checkbox" class="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> COPD</label><br>
@@ -50,6 +50,11 @@
 							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Diabetes</label><br>
 							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Cancer</label><br>
 							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Hypertension</label><br>
+					</fieldset>
+                    <fieldset>
+                    <legend><span class="number">4</span> Additional Info</legend>
+                    <textarea name="field3" placeholder="Anything else you want to tell us?"></textarea>
+					</fieldset>
 
 					<legend><span class="number">3</span> Just a few more questions...</legend>
 						<label for="job">Have you recently traveled to an area with known local spread of COVID-19?</label>
@@ -71,11 +76,6 @@
                                 <option value="reading">No</option>
                         </select>     
 
-                <!-- </fieldset>
-                    <fieldset>
-                    <legend><span class="number">4</span> Additional Info</legend>
-                    <textarea name="field3" placeholder="Anything else you want to tell us?"></textarea>
-				</fieldset> -->
 
 				<div class="container spetrogram-title">
 					<div class="row col-md-12">
@@ -91,16 +91,29 @@
 						</p>
 					</div>
 				</div>
-			
-				<div class="container spectrogram">
-					<div class="row col-md-12">
-						<button id="button" type="button" value="show">Start to breathe</button>
-						<canvas></canvas>
+
+				<div class="audio">
+
+					<div id="controls">
+						<button id="recordButton">Record</button>
+						<button id="pauseButton" disabled>Pause</button>
+						<button id="stopButton" disabled>Stop</button>
+					 </div>
+					 <div id="formats">Format: start recording to see sample rate</div>
+					   <p><strong>Recordings:</strong></p>
+					   <ol id="recordingsList"></ol>
+	
+	
+				
+					<div class="container spectrogram">
+						<div class="row col-md-12">
+							<button id="button" onclick="initialize();" type="button" value="show">Start to breathe</button>
+							<canvas></canvas>
+						</div>
 					</div>
+					
 				</div>
-			
-
-
+		
             <input type="submit" onclick="location.href='result.html';" value="Next"/>
         </form>
 	</div>
