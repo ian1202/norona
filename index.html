@@ -18,13 +18,9 @@
 	</div>
 
 
-    <div class="form-style-5" id="form">
-
-
 		<div class="container spetrogram-title">
 
-			<div class="row col-sm-12 col-md-12">
-			
+			<div class="row col-sm-12 col-md-12 stethescope-title">
 				<h1> Stethoscope Assembly</h1>
 			</div>
 
@@ -61,11 +57,13 @@
 				  </video>
 			</div>
 		</div>
-		<hr>
+
+
+		<div class="form-style-5" id="form">
 
 			<div class="row col-md-12 breathing">
 				<div>
-					<h2>Now let’s start breathing!</h2>
+					<legend><span class="number">1</span>Now, let’s start breathing!</legend>
 				</div>
 			</div>
 
@@ -74,13 +72,13 @@
 			</div>
 			<div class="row col-md-12">
 				<p>  
-				<br>1. Place on chest and breathe
-				<br>2. Click the "Breathe" button below
+				<br>1. Click the "Breathe" button below
+				<br>2. Place on chest and breathe
 				<br>3. Breathe in and out at a normal rate for 30 seconds into your microphone.  
 				<br>6. Say your name: <i>“My name is Caroline”</i>
 				</p>
 			</div>
-		</div>
+	
 
 		<div class="container audio">
 
@@ -102,17 +100,11 @@
 			</div>
 		</div>
 		
-
-
-		<div class="container form-title">
-			<h3>To achieve an accurate assessment, please fill out the following: </h3>
-		</div>
-
 		
         <form class="container">
              <fieldset>
-                <legend><span class="number">1</span> Patient Information</legend>
-                <select id="job" name="field4">
+                <legend><span class="number">2</span> User Information</legend>
+                <select id="demographic" name="field4">
                         <option value="fishkeeping">Gender</option>
                         <option value="reading">Male</option>
                         <option value="boxing">Female</option>
@@ -121,7 +113,7 @@
 						<input type="email" name="field2" placeholder="Height (ft.)">
 						<input type="email" name="field2" placeholder="Weight (lb)">
 
-					<legend><span class="number">2</span> Existing Conditions:</legend>
+					<legend><span class="number">3</span> Existing Conditions:</legend>
                             <input type="checkbox" class="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Smoker</label><br>
                             <input type="checkbox" class="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> COPD</label><br>
 							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Cardiovascular Disease</label><br>
@@ -136,7 +128,7 @@
 						 <textarea name="field3" placeholder="Other existing conditions"></textarea>
 					</fieldset>
 
-					<legend><span class="number">3</span> Just a few more questions...</legend>
+					<legend><span class="number">4</span> Just a few more questions...</legend>
 						<label for="job">Have you recently traveled to an area with known local spread of COVID-19?</label>
                         <select id="job" name="field4">
 							<option value="fishkeeping">Select</option>
@@ -162,6 +154,7 @@
             <input type="submit" onclick="location.href= 'result.html'; " value="Next"/>
         </form>
 	</div>
+</div>
 	
 
 

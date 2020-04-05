@@ -17,6 +17,8 @@ html {
     margin-top: 15%;
 }
 
+
+
 .jumbotron h1{    
     color: white;
     margin-bottom: 50px;
@@ -48,14 +50,17 @@ div .a {
 }
 
 .breathing {
-  margin-top: 10%;
+  margin: 5% 0;
 }
 
 /* Form*/
 
+#form{
+  margin-top: 10%;
+}
 
 .form-title {
-    margin: 40px 0;
+    margin-bottom: 40px 0;
 }
 
 .form-style-5{
@@ -71,7 +76,7 @@ div .a {
 	border: none;
 }
 .form-style-5 legend {
-	font-size: 1.4em;
+	font-size: 1.7rem;
 	margin: 20px 0;
 }
 .form-style-5 label {
