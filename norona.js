@@ -4,8 +4,6 @@ console.clear();
 //  before a user gesture. This fixes it.
 
 
-// var container = document.getElementsByClassName("container");
-
 // var started = null;
 // window.addEventListener('click', () => {
 //   if (started) return;
@@ -140,7 +138,8 @@ function startRecording() {
 		//start the recording process
 		rec.record()
 
-		console.log("Recording started");
+        console.log("Recording started");
+ 
 
 	}).catch(function(err) {
 	  	//enable the record button if getUserMedia() fails
