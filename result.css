@@ -1,3 +1,9 @@
+input[type="checkbox"]{
+    display: inline;
+    margin: 10px;
+}
+
+
 .section-title h2{
     color: orange;
     margin: 100px 0;
