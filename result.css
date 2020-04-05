@@ -3,6 +3,9 @@ input[type="checkbox"]{
     margin: 10px;
 }
 
+.rec{
+    margin-top: 2%;
+}
 
 .section-title h2{
     color: orange;

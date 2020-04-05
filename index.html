@@ -23,9 +23,14 @@
 
 		<div class="container spetrogram-title">
 
-			<div class="row col-md-12 infographic">
-				
+			<div class="row col-sm-12 col-md-12">
+			
 				<h1> Stethoscope Assembly</h1>
+			</div>
+
+			<div class="row">
+
+			<div class="col-sm-6 col-md-6 infographic">
 			
 				<div> 
 				<p>1.	Gather supplies:</p>
@@ -40,26 +45,39 @@
 					</div>
 				<p>
 				2.	Cut a hole the size of the straw at bottom of cup
-				<br>3.	Stick small amount of the straw through the hole and adhere to cup with tape
-				<br>4.	Cover the mouth of the cup with Saran wrap and stretch as taut as possible. Fasten to cup with rubber band
-				<br>5.	Push microphone attachment into straw at the end furthest from the cup. Wrap in insulating material (cotton, paper towel, etc)
-				<br>6.	Place on chest and breathe
+				<br><br>3.	Stick small amount of the straw through the hole and adhere to cup with tape
+				<br><br>4.	Cover the mouth of the cup with Saran wrap and stretch as taut as possible. Fasten to cup with rubber band
+				<br><br>5.	Push microphone attachment into straw at the end furthest from the cup. Wrap in insulating material (cotton, paper towel, etc)
+				<br>
 				</p>
 			</div>
-			<img id="chest" src="assets/chest.png" alt=""/> 
+			</div>
+			<div class="col-sm-4 col-md-4 infographic">
+				<!-- <img src="assets/stethescope.jpg" alt=""> -->
+					<video width="450" controls>
+					<source src="assets/Solidworks.mp4" type="video/mp4">
+					<source src="assets/Solidworks.ogg" type="video/ogg">
+					Your browser does not support HTML5 video.
+				  </video>
+			</div>
 		</div>
 
 
 			<div class="row col-md-12 breathing">
-				<h2>Now let’s start breathing!</h2>
+				<div>
+					<h2>Now let’s start breathing!</h2>
+				</div>
+			</div>
+
+			<div class="row col-md-12">
+				<img id="chest" src="assets/chest.png" alt=""/> 
 			</div>
 			<div class="row col-md-12">
 				<p>  
-				<br>1. Click the "Breathe" button below
-				<br>2. Breathe in and out at a normal rate for 30 seconds into your microphone. 
-				<br>3. Take a slow, deep breath in and hold it for 10 seconds.
-				<br>4. Breathe out for 5 seconds. 
-				<br>5. Say your name: <i>“My name is Caroline”</i>
+				<br>1. Place on chest and breathe
+				<br>2. Click the "Breathe" button below
+				<br>3. Breathe in and out at a normal rate for 30 seconds into your microphone.  
+				<br>6. Say your name: <i>“My name is Caroline”</i>
 				</p>
 			</div>
 		</div>
@@ -83,6 +101,7 @@
 				<canvas></canvas>
 			</div>
 		</div>
+		
 
 
 		<div class="container form-title">
@@ -120,6 +139,7 @@
 					<legend><span class="number">3</span> Just a few more questions...</legend>
 						<label for="job">Have you recently traveled to an area with known local spread of COVID-19?</label>
                         <select id="job" name="field4">
+							<option value="fishkeeping">Select</option>
                                 <option value="fishkeeping">Yes</option>
                                 <option value="reading">No</option>
                         </select>    
@@ -127,12 +147,14 @@
                         <label for="job">Have you been in known close contact with other COVID-19 affected people? 
                         </label>
                         <select id="job" name="field4">
+							<option value="fishkeeping">Select</option>
                                 <option value="fishkeeping">Yes</option>
                                 <option value="reading">No</option>
                         </select>  
 
                         <label for="job">Have you been enforcing self-quarantine?</label>
                         <select id="job" name="field4">
+							<option value="fishkeeping">Select</option>
                                 <option value="fishkeeping">Yes</option>
                                 <option value="reading">No</option>
                         </select>     

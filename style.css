@@ -37,12 +37,18 @@ div .a {
   margin-left: 50px;
 }
 
-#chest{
+.infographic div {
+  right: clear;
+}
+
+.breathing img,
+.infographic img{
   margin: 10px;
+  float: left;
 }
 
 .breathing {
-  margin-top: 10%;
+  margin-top: 15%;
 }
 
 /* Form*/
