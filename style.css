@@ -41,10 +41,11 @@ div .a {
 
 .infographic div {
   right: clear;
+  text-align: center;
 }
 
-.breathing img,
-.infographic img{
+
+.breathing img,{
   margin: 10px;
   float: left;
 }
