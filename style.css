@@ -19,8 +19,8 @@ html {
     margin-top: 15%;
 }
 
-#overbiewimage{
-  display: hidden;
+#overviewimage{
+  display: none;
 }
 
 .jumbotron h1{    
