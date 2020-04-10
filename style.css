@@ -19,7 +19,11 @@ html {
     margin-top: 15%;
 }
 
-#overviewimage{
+.overviewimage{
+  display: none;
+}
+
+.overvireimage img {
   display: none;
 }
 
