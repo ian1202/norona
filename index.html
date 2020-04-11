@@ -20,7 +20,7 @@
 			<div class="title">
 				<h1> COVID-19 Breathing Kit</h1>
 				<p> Your guide to using breath audio to better triage, screen, and monitor COVID-19 symptoms.</p>
-				<p> <i> Prototype Presented to You by <b style="color: purple;">Norona</b></i></p>
+				<p> <i> Presented to you by <b style="color: purple;">Norona</b></i></p>
 				<a data-scroll href="#stethoscope" class="btn btn-light btn-radius btn-brd"><i class="fa fa-play" aria-hidden="true"></i> Let's Begin </a>
 				<div class="overviewimage"> 
 					<img src="assets/overviewimage1.png"alt=""/>
@@ -123,51 +123,51 @@
         <form class="container">
              <fieldset>
                 <legend><span class="number">2</span> User Information</legend>
-                <select id="demographic" name="field4">
-                        <option value="fishkeeping">Gender</option>
-                        <option value="reading">Male</option>
-                        <option value="boxing">Female</option>
+                <select id="demographic" name="field1">
+                        <option value="gender">Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
                 </select>  
-						<input type="email" name="field2" placeholder="Age">
-						<input type="email" name="field2" placeholder="Height (ft.)">
-						<input type="email" name="field2" placeholder="Weight (lb)">
+						<input type="demographic" name="field2" placeholder="Age">
+						<input type="demographic" name="field3" placeholder="Height (ft.)">
+						<input type="demographic" name="field4" placeholder="Weight (lb)">
 
 					<legend><span class="number">3</span> Existing Conditions:</legend>
-                            <input type="checkbox" class="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1"> Smoker</label><br>
-                            <input type="checkbox" class="checkbox" id="vehicle2" name="vehicle2" value="Car"><label for="vehicle2"> COPD</label><br>
-							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Cardiovascular Disease</label><br>
-							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Chronic Respiratory Disease</label><br>
-                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> High Blood Pressure</label><br>
-							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Diabetes</label><br>
-							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Cancer</label><br>
-							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Hypertension</label><br>
+                            <input type="checkbox" class="checkbox" id="vehicle1" name="vehicle1" value="Smoker"><label for="vehicle1"> Smoker</label><br>
+                            <input type="checkbox" class="checkbox" id="vehicle2" name="vehicle2" value="COPD"><label for="vehicle2"> COPD</label><br>
+							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="cardiovascular"><label for="vehicle3"> Cardiovascular Disease</label><br>
+							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Chronic"><label for="vehicle3"> Chronic Respiratory Disease</label><br>
+                            <input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Highbloodpressure"><label for="vehicle3"> High Blood Pressure</label><br>
+							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Diabetes"><label for="vehicle3"> Diabetes</label><br>
+							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Cancer"><label for="vehicle3"> Cancer</label><br>
+							<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Hypertension"><label for="vehicle3"> Hypertension</label><br>
 					</fieldset>
                     <fieldset>
-						<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="Boat"><label for="vehicle3"> Other</label><br>
-						 <textarea name="field3" placeholder="Other existing conditions"></textarea>
+						<input type="checkbox" class="checkbox" id="vehicle3" name="vehicle3" value="other"><label for="vehicle3"> Other</label><br>
+						 <textarea name="field5" placeholder="Other existing conditions"></textarea>
 					</fieldset>
 
 					<legend><span class="number">4</span> Just a few more questions...</legend>
-						<label for="job">Have you recently traveled to an area with known local spread of COVID-19?</label>
-                        <select id="job" name="field4">
-							<option value="fishkeeping">Select</option>
-                                <option value="fishkeeping">Yes</option>
-                                <option value="reading">No</option>
+						<label for="question">Have you recently traveled to an area with known local spread of COVID-19?</label>
+                        <select id="question" name="field6">
+							<option value="select">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
                         </select>    
 
-                        <label for="job">Have you been in known close contact with other COVID-19 affected people? 
+                        <label for="question">Have you been in known close contact with other COVID-19 affected people? 
                         </label>
-                        <select id="job" name="field4">
-							<option value="fishkeeping">Select</option>
-                                <option value="fishkeeping">Yes</option>
-                                <option value="reading">No</option>
+                        <select id="question" name="field7">
+							<option value="select">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
                         </select>  
 
-                        <label for="job">Have you been enforcing self-quarantine?</label>
-                        <select id="job" name="field4">
-							<option value="fishkeeping">Select</option>
-                                <option value="fishkeeping">Yes</option>
-                                <option value="reading">No</option>
+                        <label for="questions">Have you been enforcing self-quarantine?</label>
+                        <select id="questions" name="field8">
+							<option value="select">Select</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
                         </select>     
 		
             <input type="submit" onclick="location.href= 'result.html'; " value="Next"/>
